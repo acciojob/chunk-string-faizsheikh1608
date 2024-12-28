@@ -1,6 +1,8 @@
 function stringChop(str, size) {
   // your code here
 	const arr = [];
+	if(str.length === 0)
+		return arr;
 	let count = size;
 	let subStr = '';
 	for(int i = 0 ; i < str.length;i++){
@@ -9,7 +11,7 @@ function stringChop(str, size) {
 			subStr = '';
 			count = size;
 		}
-		subStr = str[i];
+		subStr += str[i];
 		count--;
 	}
 
